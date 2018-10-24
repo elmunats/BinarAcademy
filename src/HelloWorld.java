@@ -5,6 +5,7 @@ public class HelloWorld {
 
         input();
         //hitung();
+        test();
 
 
     }
@@ -36,5 +37,11 @@ public class HelloWorld {
 
         y++;
         System.out.println(z);
+    }
+
+    public static void test() {
+        String test = "Coba";
+        System.out.println(test);
+
     }
 }
