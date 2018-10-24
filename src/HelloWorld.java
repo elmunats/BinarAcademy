@@ -28,8 +28,8 @@ public class HelloWorld {
         String name = input.nextLine();
         System.out.print("Tinggi Badan : ");
         Double tBadan = input.nextDouble();
-        System.out.print("Umur :");
+        System.out.print("Umur : ");
         Integer umur = input.nextInt();
-        System.out.println("nama saya "+name+", tinggi badan "+tBadan+", ");
+        System.out.println("nama saya "+name+", tinggi badan saya "+tBadan+", umur saya "+umur+".");
     }
 }
