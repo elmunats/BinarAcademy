@@ -13,14 +13,17 @@ public class HelloWorld {
     public static void input(){
         Scanner input = new Scanner(System.in);
 
-        System.out.println("hi");
         System.out.print("Nama Lengkap : ");
         String name = input.nextLine();
+
         System.out.print("Tinggi Badan : ");
         Double tBadan = input.nextDouble();
+
         System.out.print("Umur : ");
-        Integer umur = input.nextInt();
-        System.out.println("nama saya "+name+", tinggi badan saya "+tBadan+", umur saya "+umur+".");
+        //Integer umur = input.nextInt();
+        float umur = input.nextFloat();
+
+        System.out.println("\nhai... nama saya "+name+", tinggi badan saya "+tBadan+" cm, umur saya "+umur+" tahun.");
     }
 
     public static void hitung(){
