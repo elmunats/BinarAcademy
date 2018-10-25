@@ -5,7 +5,7 @@ public class HelloWorld {
 
         input();
         //hitung();
-        //test();
+        test();
 
 
     }
