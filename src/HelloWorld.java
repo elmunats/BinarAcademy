@@ -1,3 +1,5 @@
+import javax.sound.midi.Soundbank;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class HelloWorld {
@@ -10,7 +12,9 @@ public class HelloWorld {
         //perulanganfor();
         //perulangandowhile();
         //TestClass.Test();
-        nestedloop();
+        //nestedloop();
+        //arraytest();
+        kereta();
 
     }
 
@@ -81,6 +85,63 @@ public class HelloWorld {
             for (int j=1; j<=3; j++){
                 System.out.println("   outer j = "+j);
             }
+        }
+    }
+
+    public static void arraytest(){
+        String[] teman = {"Andi","Lukman","Faris","Ucok","Dani","Reza","Adi","Rizki"};
+        for (int i=0; i < teman.length;i++){
+            System.out.println("Indeks ke "+i+" :"+teman[i]);
+        }
+    }
+
+    //aplikasi pesan tiket kereta
+    public static void kereta(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Selamat datang di Statsiun Serpong");
+        System.out.println("1. Beli tiket Pergi");
+        System.out.println("2. Beli tiket Pulang Pergi");
+        System.out.print("silahkan pilih tiket kalian (1/2): ");
+        int beliTiket = input.nextInt();
+        if (beliTiket == 1){
+            System.out.print("Masukkan jumlah tiket anda :");
+            int jml = input.nextInt();
+            String[] jmlTiket = new String[jml];
+
+            for (int i=0; i < jmlTiket.length;i++){
+                System.out.print("Masukkan tujuan anda : ");
+                jmlTiket[i] = input.nextLine();
+            }
+            System.out.println("Teransaksi Berhasil !\n");
+            for (int i=0; i< jmlTiket.length;i++){
+                System.out.println("Tujaan anda ke : "+jmlTiket[i]);
+            }
+            System.out.println("Terimakasih, selamat menikmati perjalanan.!");
+        }else if (beliTiket == 2){
+            System.out.print("Masukkan jumlah tiket anda : ");
+            int jml = input.nextInt();
+            String[] jmlTiketPulang = new String[jml];
+            String[] jmlTiketPergi = new String[jml];
+
+            for (int i=0; i < jmlTiketPulang.length;i++){
+
+                System.out.print("Masukkan tujuan Pulang anda : ");
+                jmlTiketPulang[i] = input.next();
+                System.out.print("Masukkan tujuan pergi anda : ");
+                jmlTiketPergi[i] = input.next();
+                System.out.println();
+
+            }
+            System.out.println("Teransaksi Berhasil !\n");
+            for (int i=0; i< jmlTiketPulang.length;i++){
+                System.out.println("Tujan Pulang anda ke : "+jmlTiketPulang[i]);
+                System.out.println("Tujan Pergi anda ke : "+jmlTiketPergi[i]);
+            }
+            System.out.println("Terimakasih, selamat menikmati perjalanan.!");
+        }else {
+            System.out.println("\nMaaf peritah anda salah !");
+            System.out.println("Silahkan coba lagi, Terimakasih !");
         }
     }
 }
