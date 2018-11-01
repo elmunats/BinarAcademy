@@ -14,7 +14,9 @@ public class HelloWorld {
         //TestClass.Test();
         //nestedloop();
         //arraytest();
-        kereta();
+        //kereta();
+        //konvertersuhu();
+        arraylist();
 
     }
 
@@ -143,5 +145,38 @@ public class HelloWorld {
             System.out.println("\nMaaf peritah anda salah !");
             System.out.println("Silahkan coba lagi, Terimakasih !");
         }
+
+    }
+    public static void konvertersuhu(){
+        Scanner input = new Scanner(System.in);
+        int celcius;
+
+        System.out.println("Konverter Suhu Fahrenheit ke Celcius");
+        System.out.print("Masukkan Suhu Fahrenheit : ");
+        int fahrenheit = input.nextInt();
+        celcius = (5/9)*(fahrenheit-32);
+        System.out.println("Hasil : "+celcius+" Derajat Celcius");
+    }
+    public static void arraylist(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Masukkan jumlah peserta Binar BSD : ");
+        int jmlPeserta = input.nextInt();
+
+        ArrayList namaPeserta = new ArrayList();
+        System.out.println("+++ Masukkan Nama Peserta +++");
+        for (int i = 1; i <= jmlPeserta; i++){
+            System.out.print(i+". ");
+            String nama = input.next();
+            namaPeserta.add(nama);
+        }
+        System.out.println("=================================");
+
+        System.out.println("==========NAMA PESERTA===========");
+        for (int i = 0; i < namaPeserta.size();i++){
+            System.out.println(i+1 +". "+namaPeserta.get(i));
+        }
+        System.out.println("=================================");
+        System.out.println("");
     }
 }
